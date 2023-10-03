@@ -13,9 +13,15 @@ def order_robots_from_RobotSpareBin():
     Creates ZIP archive of the receipts and the images.
     """
     browser.configure(slowmo=1000)
-    open_robot_order_wbesite()
+    open_robot_order_website()
+    close_annoying_modal()
 
 
-def open_robot_order_wbesite():
+def open_robot_order_website():
     """Navegate to order page"""
     browser.goto('https://robotsparebinindustries.com/#/robot-order')
+
+
+def close_annoying_modal():
+    page = browser.page()
+    page.click('text=OK')
