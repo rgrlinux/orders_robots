@@ -28,7 +28,7 @@ def open_robot_order_website():
 
 def close_annoying_modal():
     page = browser.page()
-    page.click('text=OK')
+    page.click('css=button.btn.btn-dark')
 
 
 def download_csv_file():
